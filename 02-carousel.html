@@ -39,11 +39,14 @@
         background-color: #087f5b;
         border-radius: 8px;
         padding: 32px;
+        padding-right: 48px;
         padding-left: 86px;
 
         display: flex;
         align-items: center;
         gap: 86px;
+
+        position: relative;
       }
 
       .testimonial-text {
@@ -63,16 +66,75 @@
         color: #c3fae8;
       }
 
-      .button {
-      }
-      .button-icon {
-      }
-
       img {
         height: 200px;
         border-radius: 8px;
         transform: scale(1.5);
         box-shadow: 0 12px 24px 0 rgb(0, 0, 0, 0.25);
+      }
+
+      /* controls */
+
+      .btn {
+        background-color: #fff;
+        border: none;
+        height: 48px;
+        width: 40px;
+        border-radius: 50%;
+
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+
+      .btn--left {
+        left: 0;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--right {
+        /* in relation to parent element */
+        right: 0;
+        top: 50%;
+        /* in relation to element itself */
+        /* that way we can center center of the button not the begining of the button in 50% component hight */
+        transform: translate(50%, -50%);
+      }
+
+      .button-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+
+        transform: translate(-50%, 32px);
+
+        display: flex;
+        gap: 12px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .dot--1 {
+        background-color: #087f5b;
       }
     </style>
   </head>
@@ -91,7 +153,7 @@
         <p class="testimonial-job">Senior Product Manager At EDP Comercial</p>
       </blockquote>
 
-      <button class="button">
+      <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -108,7 +170,7 @@
         </svg>
       </button>
 
-      <button class="button">
+      <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -124,6 +186,12 @@
           />
         </svg>
       </button>
+      <div class="dots">
+        <button class="dot dot--1">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
     </div>
   </body>
 </html>
