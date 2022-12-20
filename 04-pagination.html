@@ -57,6 +57,7 @@
         text-decoration: none;
         color: #343a40;
       }
+
       .pagination li {
         margin: 0 1px;
         text-decoration: none;
@@ -71,7 +72,15 @@
         border-radius: 50%;
       }
 
-      li:hover a {
+      .pagination li:hover a {
+        color: #fff;
+      }
+
+      li span {
+        color: #343a40;
+      }
+
+      li:hover span {
         color: #fff;
       }
 
@@ -89,6 +98,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        cursor: pointer;
       }
 
       .left {
@@ -110,7 +121,8 @@
         height: 24px;
       }
 
-      button:hover {
+      button:hover,
+      button:active {
         color: #fff;
         background-color: #087f5b;
       }
@@ -140,24 +152,26 @@
       </button>
       <ul class="pagination">
         <li>
-          <a href=""><span class="visuallyhidden">page </span>1</a>
+          <a href="#"><span class="visuallyhidden">page </span>1</a>
         </li>
         <li>
-          <a href="" aria-current="page"
+          <a href="#" aria-current="page"
             ><span class="visuallyhidden">page </span>2</a
           >
         </li>
         <li>
-          <a href=""><span class="visuallyhidden">page </span>3</a>
+          <a href="#" class="current-page"
+            ><span class="visuallyhidden">page </span>3</a
+          >
         </li>
         <li>
-          <a href=""><span class="visuallyhidden">page </span>4</a>
+          <a href="#"><span class="visuallyhidden">page </span>4</a>
         </li>
         <li>
-          <a href=""><span class="visuallyhidden">page </span>5</a>
+          <a href="#"><span class="visuallyhidden">page </span>5</a>
         </li>
         <li>
-          <a href=""><span class="visuallyhidden">page </span>6</a>
+          <a href="#"><span class="visuallyhidden">page </span>6</a>
         </li>
         <li><span>...</span></li>
       </ul>
@@ -180,3 +194,70 @@
     </nav>
   </body>
 </html>
+
+<!-- how it was done in course -->
+<!-- <div class pagination>
+     <button svg> 
+      <a href "#" class "page-link">1</a>
+      (...)
+    <span class "dots"> ... </span>
+  <button svg>
+-->
+
+<!-- 
+.pagination {
+
+}
+
+.btn {
+  border 1px solid #green
+  height 48px
+  width: 48px
+  border-radius: 50%
+
+  cursor: pointer
+  backround: none
+}
+
+.btn:hover {
+  background-color: #green
+}
+
+.btn:hover btn-icon {
+  color: #white
+}
+
+btn-icon {
+height: 24px
+width: 24px
+stoke #green
+}
+
+page-link:link, page-line:visited {
+font-size: 18px
+color #grey
+text-decoration:none
+background-color: #green
+color: #white
+border-radius: 50%
+
+height: 36px
+width: 36px
+
+display: inline-block
+
+display: flex
+align-items: center
+justify-content: center
+
+
+}
+
+page-link:hover, page-line:active {
+  
+
+}
+.dots {
+
+}
+ -->
